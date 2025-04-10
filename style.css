@@ -78,11 +78,15 @@ header, section, footer {
 /* Features Section */
 .features-list ul,
 .features ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  align-items: center;
-  padding: 0;
+  background: #ff6347;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .features-list li,
