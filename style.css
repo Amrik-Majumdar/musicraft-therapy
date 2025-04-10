@@ -130,6 +130,13 @@ text-align: left;
 color: #6a5acd;
 font-size: 2rem;
 margin-bottom: 1rem;
+background: #fff;
+margin: 2rem auto;
+max-width: 1000px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+border-radius: 12px;
+padding: 2rem;
+text-align: left;
 }
 
 .contact {
