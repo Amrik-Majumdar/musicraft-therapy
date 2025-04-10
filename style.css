@@ -1,150 +1,128 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Reset & Base Styles */
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #333;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8fc;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 1.5rem;
+  text-decoration: none;
+  color: #5c5c5c;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #7b68ee;
+}
+
+/* Header & Sections */
 header, section, footer {
-  padding: 2rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
 .hero {
-  background: linear-gradient(135deg, #7b68ee, #6a5acd);
+  background: linear-gradient(135deg, #7b68ee, #8a7cff);
   color: white;
-  padding: 4rem 2rem;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  background-image: url('Files/Photos/GuitarPicture1.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 0;
-}
-
-.hero h1, .hero p, .hero a {
-  position: relative;
-  z-index: 1;
+  padding: 4rem 1rem;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
+/* Call-to-Action Button */
 .cta-btn {
   background: #ff6347;
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
   text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .cta-btn:hover {
-  background: #e5533d;
+  background: #e5533a;
+  transform: scale(1.05);
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  background: #eee;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 10;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-ul {
-  list-style-type: none;
+/* Features Section */
+.features-list ul,
+.features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
   padding: 0;
 }
 
-ul li {
-  margin: 0.5rem 0;
+.features-list li,
+.features li {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
+.features-list li:hover,
+.features li:hover {
+  transform: translateY(-5px);
+}
+
+/* Video & Gallery */
 video, img {
   max-width: 100%;
-  margin: 1rem 0;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-footer.hero {
-  background: #f4f4f4;
-  color: #333;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem;
-  font-size: 1.2rem;
+/* Contact & Footer */
+.contact, footer {
+  background-color: #f0f0ff;
+  color: #444;
 }
 
-footer.hero .contact-footer {
-  text-align: right;
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
 }
 
-footer.hero .contact-footer p {
-  margin: 0.2rem 0;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.features-list, .portfolio, .gallery, .testimonials, .event-schedule, .contact-form, .features {
-  background: #fff;
-  margin: 2rem auto;
-  max-width: 1000px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: left;
-}
-
-.features h2, .portfolio h2, .gallery h2, .testimonials h2, .event-schedule h2, .contact-form h2 {
-  color: #6a5acd;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.contact {
-  background: #fff0f5;
-  padding: 2rem;
-  margin-top: 2rem;
-  border-top: 4px solid #ff6347;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  color: #c71585;
-  margin-bottom: 1rem;
-}
-
+/* Loader */
 .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -158,10 +136,16 @@ footer.hero .contact-footer p {
 }
 
 .loader {
-  display: inline-block;
   width: 30px;
   height: 30px;
-  position: relative;
-  border: 4px solid #fff;
-  animation: loader 2s infinite ease;
+  border: 4px solid white;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
